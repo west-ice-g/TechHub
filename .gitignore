@@ -1,3 +1,9 @@
+# 课程/开发资料（MVP 仓库不跟踪）
+/docs/
+/tests/
+/data/team/*.pdf
+/data/team/*.pptx
+
 # 本地环境与凭据（绝不提交）
 .env
 .env.local

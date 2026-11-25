@@ -4,7 +4,7 @@
 .env.local
 .env.*.local
 docs
-tests/tmp
+tests
 storage
 public/uploads
 data/team

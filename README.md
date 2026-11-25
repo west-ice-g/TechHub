@@ -67,7 +67,6 @@ chmod +x deploy.sh
 ./deploy.sh migrate    # 对已有数据库执行迁移
 ./deploy.sh init-admin # 初始化/重置管理员密码
 ./deploy.sh backup     # 备份数据库和上传文件
-./deploy.sh test       # 在 app 容器内运行三套测试
 ```
 
 `down` 不会删除数据库卷和上传文件；不要随意执行 `docker compose down -v`，它会删除数据库数据。
@@ -86,7 +85,7 @@ ENV_FILE=.env.production ./deploy.sh up
 | `db` | MySQL 8.0，首次启动自动导入 SQL |
 | `docker-compose.yml` | 服务编排、端口、健康检查、卷 |
 | `Dockerfile` | 构建 PHP 8.2 + Apache 镜像 |
-| `deploy.sh` | 一条命令启动、迁移、备份和测试 |
+| `deploy.sh` | 一条命令启动、迁移、备份和管理员初始化 |
 | `docker/entrypoint.sh` | 创建和授权运行目录 |
 | `docker/init-admin.php` | 从环境变量初始化管理员/编辑账号 |
 | `.env.example` | 环境变量模板，不包含真实密码 |
@@ -186,19 +185,25 @@ DB_CHARSET=utf8mb4
 php -S 127.0.0.1:8090 -t public public/router.php
 ```
 
-生产环境应使用 Apache/Nginx，Web 根目录必须指向 `public/`。Apache 配置、Nginx 配置、目录权限和 HTTPS 步骤见 [部署文档](<docs/deliverables/冰冰冰队_部署文档(2412888_2411259_2413238_2412509).md>)。
-
-Apache 的关键要求：
+生产环境应使用 Apache/Nginx，Web 根目录必须指向 `public/`。Apache 虚拟主机示例：
 
 ```apache
-DocumentRoot "/path/to/TechHub/public"
-<Directory "/path/to/TechHub/public">
-    AllowOverride All
-    Require all granted
-</Directory>
+<VirtualHost *:80>
+    ServerName techhub.example.com
+    DocumentRoot "/var/www/techhub/public"
+
+    <Directory "/var/www/techhub/public">
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog "/var/log/apache2/techhub-error.log"
+    CustomLog "/var/log/apache2/techhub-access.log" combined
+</VirtualHost>
 ```
 
-并启用 `mod_rewrite`。上传目录不能执行 PHP 脚本。
+启用 `mod_rewrite`，按服务器实际 PHP-FPM/Fcgid 方式处理 `.php`。上传目录不能执行 PHP 脚本。
 
 ### 3.6 文件权限
 
@@ -322,21 +327,7 @@ http://localhost:8090/admin/login
 | ECharts 空白 | 使用有 `stats.view` 权限的账号登录，访问 `/admin/api/stats` |
 | Docker 数据丢失 | 是否执行过 `docker compose down -v`；正常停止用 `./deploy.sh down` |
 
-## 6. 测试
-
-```bash
-# 本地 PHP
-php tests/smoke.php
-php tests/frontend_smoke.php
-php tests/admin_smoke.php
-
-# Docker
-./deploy.sh test
-```
-
-预期结果：14 + 34 + 79 项全部通过。测试会创建并清理测试业务数据。
-
-## 7. 项目结构
+## 6. 项目结构
 
 ```text
 TechHub/
@@ -356,7 +347,6 @@ TechHub/
 │  ├─ assets/
 │  └─ uploads/
 ├─ storage/                # Session、日志
-├─ tests/
 ├─ Dockerfile
 ├─ docker-compose.yml
 ├─ deploy.sh
@@ -364,7 +354,7 @@ TechHub/
 └─ .env.example
 ```
 
-## 8. 技术栈
+## 7. 技术栈
 
 - PHP 8.2，原生 MVC，无 Laravel/ThinkPHP
 - MySQL 8.0，PDO 原生预处理
@@ -373,16 +363,7 @@ TechHub/
 - Docker Compose v2
 - 17 张业务表、21 个外键
 
-## 9. 文档
-
-- [需求规格说明书](docs/requirements.md)
-- [数据库设计文档](docs/database-design.md)
-- [前台开发实施记录](docs/implementation-notes.md)
-- [后台管理实施记录](docs/admin-implementation.md)
-- [课程设计交付文件](docs/deliverables/README.md)
-- [部署文档（两种方案）](<docs/deliverables/冰冰冰队_部署文档(2412888_2411259_2413238_2412509).md>)
-
-## 10. 安全说明
+## 8. 安全说明
 
 - `.env` 已被 `.gitignore` 忽略，禁止提交真实密码；
 - 密码只保存 `password_hash`；

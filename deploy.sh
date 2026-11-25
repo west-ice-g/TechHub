@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # TechHub Docker Compose deployment helper.
-# Usage: ./deploy.sh [up|start|stop|down|restart|logs|migrate|init-admin|test|backup|status]
+# Usage: ./deploy.sh [up|start|stop|down|restart|logs|migrate|init-admin|backup|status]
 set -eu
 
 ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
@@ -142,11 +142,6 @@ case "${1:-up}" in
     init-admin)
         init_admin
         ;;
-    test)
-        $COMPOSE exec -T -e TECHHUB_TEST_BASE=http://127.0.0.1 app php tests/smoke.php
-        $COMPOSE exec -T -e TECHHUB_TEST_BASE=http://127.0.0.1 app php tests/frontend_smoke.php
-        $COMPOSE exec -T -e TECHHUB_TEST_BASE=http://127.0.0.1 app php tests/admin_smoke.php
-        ;;
     backup)
         prepare_dirs
         stamp=$(date +%Y%m%d-%H%M%S)
@@ -170,7 +165,6 @@ case "${1:-up}" in
   logs        查看容器日志
   migrate     对现有数据库执行可重复迁移
   init-admin  按 .env 初始化首次管理员密码
-  test        在 app 容器内执行三套测试
   backup      备份数据库与 data/uploads 文件
   status      查看容器状态
 EOF
