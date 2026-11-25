@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="校园技术社区项目封面">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset=".55" stop-color="#12326b"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#93c5fd" stroke-width=".6" opacity=".13"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <rect width="800" height="480" fill="url(#grid)"/>
+  <circle cx="650" cy="80" r="150" fill="#38bdf8" opacity=".12"/>
+  <circle cx="115" cy="430" r="180" fill="#2dd4bf" opacity=".12"/>
+  <g fill="none" stroke="#67e8f9" stroke-width="2" opacity=".8">
+    <path d="M160 300 280 205 400 245 530 150 650 190"/>
+    <path d="M280 205 310 338 470 368 650 190"/>
+  </g>
+  <g fill="#dbeafe">
+    <circle cx="160" cy="300" r="10"/><circle cx="280" cy="205" r="10"/>
+    <circle cx="400" cy="245" r="10"/><circle cx="530" cy="150" r="10"/>
+    <circle cx="650" cy="190" r="10"/><circle cx="310" cy="338" r="10"/>
+    <circle cx="470" cy="368" r="10"/>
+  </g>
+  <text x="70" y="105" fill="#94a3b8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" letter-spacing="5">TECHHUB / PROJECT 01</text>
+  <text x="70" y="185" fill="#f8fafc" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="54" font-weight="700">校园技术社区</text>
+  <text x="72" y="225" fill="#bfdbfe" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21">连接成员、项目与知识的团队展示平台</text>
+  <text x="70" y="440" fill="#67e8f9" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17" letter-spacing="2">PHP · MYSQL · BOOTSTRAP</text>
+</svg>

@@ -1,0 +1,88 @@
+[PASS] 需求文档 PDF 存在且非空
+[PASS] 需求文档 PDF 副本存在
+[PASS] 需求文档 PDF 正本与副本一致
+[PASS] 需求文档 PDF 可打开，页数 13
+[PASS] 需求文档 封面有实际内容
+[PASS] 需求文档 Markdown 源文件存在
+[PASS] 设计文档 PDF 存在且非空
+[PASS] 设计文档 PDF 副本存在
+[PASS] 设计文档 PDF 正本与副本一致
+[PASS] 设计文档 PDF 可打开，页数 28
+[PASS] 设计文档 封面有实际内容
+[PASS] 设计文档 Markdown 源文件存在
+[PASS] 实现文档 PDF 存在且非空
+[PASS] 实现文档 PDF 副本存在
+[PASS] 实现文档 PDF 正本与副本一致
+[PASS] 实现文档 PDF 可打开，页数 18
+[PASS] 实现文档 封面有实际内容
+[PASS] 实现文档 Markdown 源文件存在
+[PASS] 用户手册 PDF 存在且非空
+[PASS] 用户手册 PDF 副本存在
+[PASS] 用户手册 PDF 正本与副本一致
+[PASS] 用户手册 PDF 可打开，页数 27
+[PASS] 用户手册 封面有实际内容
+[PASS] 用户手册 Markdown 源文件存在
+[PASS] 部署文档 PDF 存在且非空
+[PASS] 部署文档 PDF 副本存在
+[PASS] 部署文档 PDF 正本与副本一致
+[PASS] 部署文档 PDF 可打开，页数 18
+[PASS] 部署文档 封面有实际内容
+[PASS] 部署文档 Markdown 源文件存在
+[PASS] README.md 无未替换占位符
+[PASS] 冰冰冰队_实现文档(2412888_2411259_2413238_2412509).md 无未替换占位符
+[PASS] 冰冰冰队_实现文档(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-dashboard.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 无未替换占位符
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-home.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-team.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-members.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-member-detail.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-projects.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-project-detail.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-articles.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-article-detail.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-messages.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-downloads.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-login.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-login.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-dashboard.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-dashboard-charts.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-members.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-projects.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-articles.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-announcements.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-files.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-messages.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-users.png
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-roles.png
+[PASS] 冰冰冰队_设计文档(2412888_2411259_2413238_2412509).md 无未替换占位符
+[PASS] 冰冰冰队_设计文档(2412888_2411259_2413238_2412509).md 图片存在: assets/architecture.png
+[PASS] 冰冰冰队_设计文档(2412888_2411259_2413238_2412509).md 图片存在: assets/modules.png
+[PASS] 冰冰冰队_设计文档(2412888_2411259_2413238_2412509).md 图片存在: assets/business-flow.png
+[PASS] 冰冰冰队_设计文档(2412888_2411259_2413238_2412509).md 图片存在: assets/er-diagram.png
+[PASS] 冰冰冰队_设计文档(2412888_2411259_2413238_2412509).md 图片存在: assets/mvc-flow.png
+[PASS] 冰冰冰队_部署文档(2412888_2411259_2413238_2412509).md 无未替换占位符
+[PASS] 冰冰冰队_需求文档(2412888_2411259_2413238_2412509).md 无未替换占位符
+[PASS] 冰冰冰队_需求文档(2412888_2411259_2413238_2412509).md 图片存在: assets/business-flow.png
+[PASS] 冰冰冰队_项目展示(2412888_2411259_2413238_2412509).md 无未替换占位符
+[PASS] 冰冰冰队_项目展示(2412888_2411259_2413238_2412509).md 图片存在: assets/architecture.png
+[PASS] 冰冰冰队_项目展示(2412888_2411259_2413238_2412509).md 图片存在: assets/modules.png
+[PASS] 冰冰冰队_项目展示(2412888_2411259_2413238_2412509).md 图片存在: assets/er-diagram.png
+[PASS] 冰冰冰队_项目展示(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/front-home.png
+[PASS] 冰冰冰队_项目展示(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-users.png
+[PASS] 冰冰冰队_项目展示(2412888_2411259_2413238_2412509).md 图片存在: assets/screenshots/admin-dashboard-charts.png
+[PASS] PPTX 存在且非空
+[PASS] PPTX 副本存在
+[PASS] PPTX 可打开，幻灯片数 15
+[PASS] PPTX 含团队名称
+[PASS] PPTX 含四名真实成员
+[PASS] PPTX 含项目分工明细和工作量比例
+[PASS] README.md 未写入真实数据库密码
+[PASS] 冰冰冰队_实现文档(2412888_2411259_2413238_2412509).md 未写入真实数据库密码
+[PASS] 冰冰冰队_用户手册(2412888_2411259_2413238_2412509).md 未写入真实数据库密码
+[PASS] 冰冰冰队_设计文档(2412888_2411259_2413238_2412509).md 未写入真实数据库密码
+[PASS] 冰冰冰队_部署文档(2412888_2411259_2413238_2412509).md 未写入真实数据库密码
+[PASS] 冰冰冰队_需求文档(2412888_2411259_2413238_2412509).md 未写入真实数据库密码
+[PASS] 冰冰冰队_项目展示(2412888_2411259_2413238_2412509).md 未写入真实数据库密码
+[PASS] README.md 未写入真实数据库密码
+
+RESULT: PASS

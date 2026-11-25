@@ -1,0 +1,11 @@
+# Defense in depth if Apache is accidentally pointed at the project root.
+Options -Indexes
+
+<FilesMatch "(^\.env|^\.git|composer\.(json|lock)|\.(ini|log|sql|bak|zip)$)">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(app|bootstrap|config|core|data|docs|storage|tests|vendor)(/|$) - [F,L]
+</IfModule>

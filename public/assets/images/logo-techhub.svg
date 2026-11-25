@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="TechHub 标志">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="46" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="62" fill="none" stroke="#1d4ed8" stroke-width="2" opacity=".5"/>
+  <circle cx="100" cy="100" r="42" fill="none" stroke="#14b8a6" stroke-width="2" opacity=".4"/>
+  <path d="M61 72h78M61 128h78" stroke="url(#line)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M78 55v90M122 55v90" stroke="url(#line)" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="78" cy="72" r="8" fill="#e2e8f0"/>
+  <circle cx="122" cy="72" r="8" fill="#e2e8f0"/>
+  <circle cx="78" cy="128" r="8" fill="#e2e8f0"/>
+  <circle cx="122" cy="128" r="8" fill="#e2e8f0"/>
+</svg>

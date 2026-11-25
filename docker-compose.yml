@@ -1,0 +1,86 @@
+name: techhub
+
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_0900_ai_ci
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-techhub}
+      MYSQL_USER: ${MYSQL_USER:-techhub_app}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?请在 .env 中设置 MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?请在 .env 中设置 MYSQL_ROOT_PASSWORD}
+      TZ: ${APP_TIMEZONE:-Asia/Shanghai}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./data/install.sql:/docker-entrypoint-initdb.d/01-install.sql:ro
+      - ./data/migrations/2026-11-25_frontend.sql:/docker-entrypoint-initdb.d/02-frontend.sql:ro
+      - ./data/migrations/2026-11-25_admin.sql:/docker-entrypoint-initdb.d/03-admin.sql:ro
+      - ./data/migrations/2026-11-25_admin_demo_dates.sql:/docker-entrypoint-initdb.d/04-admin-demo-dates.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u$$MYSQL_USER -p$$MYSQL_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+    networks:
+      - techhub
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      APP_NAME: ${APP_NAME:-TechHub}
+      APP_ENV: ${APP_ENV:-production}
+      APP_DEBUG: ${APP_DEBUG:-false}
+      APP_URL: ${APP_URL:-http://localhost:${APP_PORT:-8090}}
+      APP_TIMEZONE: ${APP_TIMEZONE:-Asia/Shanghai}
+      APP_BASE_PATH: ${APP_BASE_PATH:-}
+      SESSION_NAME: ${SESSION_NAME:-TECHHUBSESSID}
+      SESSION_LIFETIME: ${SESSION_LIFETIME:-7200}
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: ${MYSQL_DATABASE:-techhub}
+      DB_USERNAME: ${MYSQL_USER:-techhub_app}
+      DB_PASSWORD: ${MYSQL_PASSWORD:?请在 .env 中设置 MYSQL_PASSWORD}
+      DB_CHARSET: utf8mb4
+      INITIAL_ADMIN_USERNAME: ${INITIAL_ADMIN_USERNAME:-admin}
+      INITIAL_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD:?请在 .env 中设置 INITIAL_ADMIN_PASSWORD}
+      INITIAL_EDITOR_USERNAME: ${INITIAL_EDITOR_USERNAME:-editor}
+      INITIAL_EDITOR_PASSWORD: ${INITIAL_EDITOR_PASSWORD:-}
+      RESET_ADMIN_PASSWORD: ${RESET_ADMIN_PASSWORD:-0}
+      TZ: ${APP_TIMEZONE:-Asia/Shanghai}
+    ports:
+      - "${APP_PORT:-8090}:80"
+    volumes:
+      - ./storage:/var/www/html/storage
+      - app_sessions:/var/www/html/storage/sessions
+      - ./public/uploads:/var/www/html/public/uploads
+      - ./data/team:/var/www/html/data/team
+      - ./data/personal:/var/www/html/data/personal
+      - ./data/resources:/var/www/html/data/resources
+    healthcheck:
+      test: ["CMD-SHELL", "php -r \"exit(@file_get_contents('http://127.0.0.1/') ? 0 : 1);\""]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    networks:
+      - techhub
+
+volumes:
+  db_data:
+    name: techhub_db_data
+  app_sessions:
+    name: techhub_sessions
+
+networks:
+  techhub:
+    name: techhub_network

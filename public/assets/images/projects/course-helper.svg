@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="课程资料检索助手项目封面">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102a2e"/>
+      <stop offset=".6" stop-color="#115e59"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="690" cy="70" r="190" fill="#2dd4bf" opacity=".16"/>
+  <g transform="translate(92 100)">
+    <rect width="280" height="280" rx="30" fill="#0f172a" opacity=".76" stroke="#5eead4" stroke-opacity=".35"/>
+    <rect x="38" y="52" width="204" height="20" rx="10" fill="#5eead4" opacity=".8"/>
+    <rect x="38" y="98" width="152" height="12" rx="6" fill="#94a3b8" opacity=".7"/>
+    <rect x="38" y="130" width="188" height="12" rx="6" fill="#94a3b8" opacity=".5"/>
+    <rect x="38" y="178" width="204" height="56" rx="12" fill="#134e4a"/>
+    <rect x="56" y="198" width="92" height="16" rx="8" fill="#2dd4bf" opacity=".8"/>
+  </g>
+  <g fill="none" stroke="#a7f3d0" stroke-width="3" opacity=".65">
+    <circle cx="555" cy="245" r="72"/>
+    <path d="m610 300 54 54"/>
+  </g>
+  <text x="425" y="145" fill="#94a3b8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" letter-spacing="5">TECHHUB / PROJECT 02</text>
+  <text x="425" y="224" fill="#f8fafc" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="46" font-weight="700">课程资料</text>
+  <text x="425" y="278" fill="#f8fafc" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="46" font-weight="700">检索助手</text>
+  <text x="425" y="326" fill="#a7f3d0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="21">让资料检索更清晰、更高效</text>
+  <text x="425" y="398" fill="#5eead4" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17" letter-spacing="2">SEARCH · INDEX · LEARN</text>
+</svg>

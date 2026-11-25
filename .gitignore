@@ -1,0 +1,35 @@
+# 本地环境与凭据（绝不提交）
+.env
+.env.local
+.env.*.local
+
+# 运行日志与 Session
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+
+# 用户上传文件
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+/public/uploads/*
+!/public/uploads/.gitkeep
+!/public/uploads/.htaccess
+
+# 备份与临时文件
+/backups/
+*.bak
+*.tmp
+*.log
+*.sql.gz
+*.zip
+
+# 系统与 IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# 测试临时目录
+/tests/tmp/*
+!/tests/tmp/.gitkeep

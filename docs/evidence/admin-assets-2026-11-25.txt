@@ -1,0 +1,18 @@
+TechHub 后台静态资源检查
+日期：2026-11-25
+方法：登录后台后从 /admin 页面提取本地 href/src，再逐项请求。
+结果：全部 HTTP 200。
+
+200 /assets/css/admin.css
+200 /assets/css/app.css
+200 /assets/css/bootstrap-icons.min.css
+200 /assets/css/bootstrap.min.css
+200 /assets/js/admin-charts.js
+200 /assets/js/app.js
+200 /assets/js/bootstrap.bundle.min.js
+200 /assets/js/echarts.min.js
+200 /favicon.ico
+200 /assets/fonts/bootstrap-icons.woff2
+200 /assets/fonts/bootstrap-icons.woff
+
+说明：后台页面不依赖 CDN；ECharts 和 Bootstrap 均为本地文件。

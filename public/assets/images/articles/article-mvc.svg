@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="PHP MVC 文章封面">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/><stop offset=".55" stop-color="#312e81"/><stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <g transform="translate(525 88)" fill="none" stroke-linecap="round">
+    <rect x="0" y="0" width="180" height="80" rx="18" stroke="#a5b4fc" stroke-width="3"/>
+    <rect x="50" y="115" width="180" height="80" rx="18" stroke="#67e8f9" stroke-width="3"/>
+    <rect x="0" y="230" width="180" height="80" rx="18" stroke="#a5b4fc" stroke-width="3"/>
+    <path d="M90 80v35M140 195v35" stroke="#e2e8f0" stroke-width="3" opacity=".7"/>
+  </g>
+  <text x="64" y="118" fill="#a5b4fc" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" letter-spacing="4">TECHHUB / ARTICLE</text>
+  <text x="64" y="206" fill="#f8fafc" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="50" font-weight="700">原生 PHP MVC</text>
+  <text x="64" y="259" fill="#f8fafc" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="50" font-weight="700">请求生命周期</text>
+  <text x="66" y="320" fill="#c7d2fe" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="20">入口 · 路由 · 控制器 · 模型 · 视图</text>
+</svg>

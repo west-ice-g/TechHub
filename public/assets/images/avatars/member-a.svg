@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="示例成员A头像">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#g)"/>
+  <circle cx="100" cy="78" r="36" fill="#e2e8f0" opacity=".92"/>
+  <path d="M35 186c9-42 34-63 65-63s56 21 65 63" fill="#e2e8f0" opacity=".92"/>
+  <circle cx="158" cy="44" r="18" fill="#2dd4bf" opacity=".85"/>
+  <text x="100" y="192" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700" opacity=".55">A</text>
+</svg>
